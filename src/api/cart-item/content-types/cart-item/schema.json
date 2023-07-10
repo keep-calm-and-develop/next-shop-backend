@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cart_items",
+  "info": {
+    "singularName": "cart-item",
+    "pluralName": "cart-items",
+    "displayName": "Cart Items",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quantity": {
+      "type": "integer"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
